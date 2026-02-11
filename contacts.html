@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="contact-wrapper">
+
+             <div class="Inter-contact">
+                <h2>International Contact</h2>
+                <form>
+                    <input type="text" id ="name " placeholder="Enter your Name" required>
+                    <input type="tel"  id ="phone" placeholder="Enter Mobile Number"
+                        required>
+                    <input type="Email" id ="email" placeholder="Enter your Email" required>
+                    <select  id ="gender"required>
+                        <option value>Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                    </select>
+                    <input type="text" id="address" placeholder="Enter your Address"
+                        required>
+                    <textarea id="description"
+                        placeholder="Describe Your problem (option)"></textarea>
+                    <button type="submit" onclick="internationalusers()">Submit Here</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+            <div class="contact-loc">
+
+               <h3>Contact Details</h3>
+                <ol>Email : <a
+                        htef="https://www.email.com">akhospital@gmail.com</a></ol>
+                <ol>Mobile Number : <a htef="tel:102030050">102030050</a></ol>
+                <ol>Whatsapp Number : <a htef="tel:123657890">123657890</a></ol>
+                <ol>Emergency Number : <a
+                        htef="tel:963258741">963258741</a></ol>
+                <ol>Ambulance Number : <a htef="tel:108">108</a></ol>
+                <ol>Book On Appointment : <a
+                        htef="appointments.html">Book Here</a></ol>
+
+                        <h3>Address</h3>
+        
+                    <li> <a href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=pos.12.578998565673828_78.17984008789062__Krishnagiri%252C%2520Tamil%2520Nadu%2520635115_%7Epos.13.072092056274414_80.20185852050781__Chennai%252C%2520Tamil%2520Nadu_&mode=d&cp=12.697641%7E79.191435&lvl=9.4&style=r">Chennai</a></li>
+                         <li> <a href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=pos.12.578998565673828_78.17984008789062__Krishnagiri%252C%2520Tamil%2520Nadu%2520635115_%7Epos.13.072092056274414_80.20185852050781__Chennai%252C%2520Tamil%2520Nadu_&mode=d&cp=12.697641%7E79.191435&lvl=9.4&style=r">Mumbai</a></li>
+                             <li> <a href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=pos.12.578998565673828_78.17984008789062__Krishnagiri%252C%2520Tamil%2520Nadu%2520635115_%7Epos.13.072092056274414_80.20185852050781__Chennai%252C%2520Tamil%2520Nadu_&mode=d&cp=12.697641%7E79.191435&lvl=9.4&style=r">Bengaluru</a></li>
+                                 <li> <a href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=pos.12.578998565673828_78.17984008789062__Krishnagiri%252C%2520Tamil%2520Nadu%2520635115_%7Epos.13.072092056274414_80.20185852050781__Chennai%252C%2520Tamil%2520Nadu_&mode=d&cp=12.697641%7E79.191435&lvl=9.4&style=r">Kolkata</a></li>
+                        
+
+            </div>
+        </div>
+        <a href="https://www.google.location.com">Google Maps</a>
+    </div>
+           
+<script>
+async function internationalusers() {
+
+    const data = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        gender: document.getElementById('gender').value,
+        address: document.getElementById('address').value,
+        description: document.getElementById('description').value
+    };
+
+    console.log("Sending data:", data);
+
+    try {
+        const response = await fetch("http://localhost:5000/inter", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        console.log("Server Response:", result);
+
+        if (result.status === "success") {
+            alert("International Users Appointment Booked Successfully");
+            document.querySelector("form").reset();
+        } else {
+            alert("Booking Failed...");
+        }
+
+    } catch (error) {
+        console.error("Fetch Error:", error);
+        alert("Backend Server Not Reached");
+    }
+}
+</script>
+
+    </body>
+</html>

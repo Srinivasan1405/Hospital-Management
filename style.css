@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.dashboard {
+    width: 100%;
+    min-height: 30px;
+    background-color: #f4f9fc;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Header */
+.main-head {
+    background-color: #14648f;
+    padding: 15px 30px;
+    color: #ffffff;
+}
+
+.main-head h2 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.side-head {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-head a {
+    text-decoration: none;
+    color: #0b6fa4;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.side-head a:hover {
+    background-color: #0b6fa4;
+    color: white;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.65), rgba(0, 0, 0, 0.75)),
+        url("doc-1pics.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section img {
+    size: cover;
+}
+
+/* LEFT-BOTTOM CONTENT */
+.main-content {
+    position: absolute;
+    bottom: 100px;
+    /* 🔽 move content down */
+    left: 60px;
+    /* ⬅ move content left */
+    max-width: 600px;
+}
+
+/* Main heading */
+.content-head h1 {
+    font-size: 40px;
+    color: #e8ecef;
+}
+
+.special-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    color: #40456f;
+}
+
+.content-add h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #f4f0f0;
+}
+
+
+.content-add1 h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #e0e0e0;
+}
+
+
+.img {
+    display: none;
+}
+
+.special {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 80px 30px;
+    background: #f3f7fa;
+}
+
+
+
+.highlight {
+    background: #2891c5;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight h2 {
+    font-size: 25px;
+    color: white;
+    margin: 10px;
+}
+
+.highlight h3 {
+    font-size: 20px;
+    color: #302a2a;
+}
+
+.dept0 {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f5f8fc;
+    text-align: center;
+}
+
+.dept {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    max-width: 100%;
+    margin: 10px;
+}
+
+
+.dept .special {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #f6dada;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.special {
+    cursor: pointer;
+}
+
+.dept-info {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dept-info img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.dept-info p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Appointment Section */
+.appoitment {
+    justify-content: center;
+    align-items:center;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.appoitment h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.inputs input,
+.inputs select,
+.inputs textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.inputs input:focus,
+.inputs select:focus,
+.inputs textarea:focus {
+    border-color: #3f3a5f;
+    box-shadow: 0 0 0 2px rgba(71, 88, 84, 0.2);
+}
+
+
+.inputs textarea {
+    resize: none;
+    height: 100px;
+}
+
+
+.inputs button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #40456f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.inputs button:hover {
+    background: #0b4161;
+    transform: translateY(-2px);
+}
+
+.about {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #798896;
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-head {
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-head h1 {
+    font-size: 45px;
+    margin: 20px;
+    color: #232d8e;
+}
+
+.about-head h3 {
+    font-size: 30px;
+    margin: 9px;
+    color: #333;
+
+}
+
+.about-head p {
+    font-size: 20px;
+    margin: 10px;
+    color: #865f16;
+    font-weight: 500;
+}
+
+
+
+.about-special {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f4f8fc;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+
+.about-special h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+
+}
+
+
+.abouts-special {
+    background: #ddc3c3;
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.abouts-special:hover {
+    transform: translateY(1px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.abouts-special h2 {
+    font-size: 22px;
+    color: #0c0e0f;
+    margin: 0;
+}
+
+
+
+
+.abouts {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 20px;
+
+}
+
+.abouts h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.abouts h3 {
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #1e90ff;
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+}
+
+
+.abouts p {
+    font-size: 20px;
+    font-weight: 400 color: #6c2727;
+
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.loco {
+    color: white;
+
+}
+
+.loco {
+    margin: 30px;
+}
+
+.website {
+    color: white;
+    text-decoration: none;
+    display: grid;
+    position: space-between;
+    margin: 10px;
+}
+
+.refer a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+}
+
+.website a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: gray;
+}
+
+.refer {
+    color: white;
+    text-decoration: none;
+    display: grid;
+    position: space-between;
+    margin: 10px;
+}
+
+/* Contact */
+
+
+/* Main Wrapper */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+
+    padding: 40px 20px;
+    background: #f5f9ff;
+}
+
+/* Form Section */
+.Inter-contact {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Inter-contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a3c6e;
+}
+
+/* Form Inputs */
+.Inter-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.Inter-contact input,
+.Inter-contact select,
+.Inter-contact textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.Inter-contact input:focus,
+.Inter-contact select:focus,
+.Inter-contact textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+/* Textarea */
+.Inter-contact textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+/* Submit Button */
+.Inter-contact button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Inter-contact button:hover {
+    background: #0d47a1;
+}
+
+/* Contact Details Section */
+.contact-loc {
+    background: #ffffff;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-loc h3 {
+    margin: 15px 0 8px;
+    color: #1a3c6e;
+}
+
+.contact-loc ol {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-loc a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.contact-loc a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    /* ================= HEADER ================= */
+    .dashboard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .side-head {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .side-head a {
+        display: block;
+        margin: 6px 0;
+    }
+
+    /* ================= HERO SECTION ================= */
+    section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 15px;
+    }
+
+    .main-content {
+        padding: 0;
+    }
+
+    .img img {
+        width: 100%;
+        max-width: 280px;
+        margin: 20px auto;
+    }
+
+    /* ================= HIGHLIGHTS ================= */
+    .special {
+        grid-template-columns: 1fr;
+        /* One card per row */
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .highlight {
+        padding: 20px 15px;
+    }
+
+    .highlight h2 {
+        font-size: 16px;
+    }
+
+    .highlight h3 {
+        font-size: 13px;
+    }
+
+    /* ================= DEPARTMENTS ================= */
+    .dept {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* ================= APPOINTMENT ================= */
+    .appoitment {
+        margin: 20px 10px;
+
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    /* ================= FOOTER ================= */
+    .foot {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

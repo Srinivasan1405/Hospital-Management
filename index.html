@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>AK HOSPITALS</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <div class="dashboard">
+            <div class="main-head">
+                <h2>AK HOSPITALS</h2>
+            </div>
+
+            <div class="side-head">
+                <a href="#">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contacts.html">Contact Us</a>
+                <a href="appointments.html">Book Here</a>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section>
+            <div class="main-content">
+                <div class="content-head">
+                    <h1>“Your Health, Our Priority”</h1>
+                </div>
+
+                <div class="content-add">
+                    <h2>Hope | Healing | Health</h2>
+                </div>
+
+                <div class="content-add1">
+                    <h3>Anna Nagar, Chennai | 24×7 Emergency Care</h3>
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="doc-1pics.avif" alt="Doctor Image">
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <h1 class="special-head">Our Healthcare Excellence</h1>
+
+        <div class="special">
+            <div class="highlight">
+                <h2>24/7 Open</h2>
+                <h3>Advanced Emergency Wards</h3>
+            </div>
+
+            <div class="highlight">
+                <h2>50+ Experienced Doctors</h2>
+                <h3>200 Staff & Employees</h3>
+            </div>
+
+            <div class="highlight">
+                <h2>200+ Beds</h2>
+                <h3>Advanced ICUs & Wards</h3>
+            </div>
+
+            <div class="highlight">
+                <h2>25+ Years Experience</h2>
+                <h3>10000+ Happy Patients</h3>
+            </div>
+
+            <div class="highlight">
+                <h2>Blood Emergency Care</h2>
+                <h3>Rapid Response 24/7</h3>
+            </div>
+
+            <div class="highlight">
+                <h2>Diagnostic Center</h2>
+                <h3>MRI, CT Scan & X-Ray</h3>
+            </div>
+        </div>
+
+        <!-- DEPARTMENTS -->
+        <div class="dept0">
+            <h1>Our Special Departments</h1>
+
+            <div class="dept">
+                <div class="special" onclick="showInfo(this)"
+                    data-info="Cardiology Treatments:
+Cardiology focuses on diagnosing and treating diseases of the heart and blood vessels,
+including conditions such as heart attacks, hypertension, and arrhythmia. It involves advanced medical 
+procedures like angioplasty, bypass surgery, and heart valve repair using modern medical technology.
+Our experienced cardiologists provide 24/7 emergency care, continuous patient monitoring, and preventive
+heart health programs. With accurate diagnosis and personalized treatment plans, we ensure better recovery and long-term heart
+    health for patients.">
+                    <h2>Cardiology Treatments</h2>
+                </div>
+
+                <div class="special" onclick="showInfo(this)"
+                    data-info="Neurology Treatments:
+Neurology treats disorders of the brain, nerves, and spinal cord, including conditions such as stroke,
+epilepsy, migraines, Parkinson’s disease, and multiple sclerosis. Our neurology department provides advanced
+diagnostic services, continuous monitoring, and specialized treatment plans using modern medical technology. 
+Expert neurologists and trained staff ensure accurate diagnosis, timely intervention, and effective rehabilitation.
+With patient-centered care and innovative treatment methods, we aim to improve neurological health and overall quality of life.">
+                    <h2>Neurology Treatments</h2>
+                </div>
+
+                <div class="special" onclick="showInfo(this)"
+                    data-info="Orthopedics Treatments:
+Orthopedics focuses on the diagnosis and treatment of conditions related to bones, joints, muscles, ligaments, and mobility problems.
+It includes the management of fractures, arthritis, sports injuries, spine disorders, and joint replacement surgeries.
+Our orthopedic specialists use advanced imaging, surgical techniques, and rehabilitation programs to ensure faster recovery and improved mobility.
+With personalized treatment plans and modern facilities, we help patients regain strength, movement, and a better quality of life..">
+                    <h2>Orthopedics Treatments</h2>
+                </div>
+
+                <div class="special" onclick="showInfo(this)"
+                    data-info="Cancer Treatments:
+Cancer treatment includes comprehensive oncology care such as chemotherapy, radiation therapy, immunotherapy,
+and advanced surgical procedures. Our specialized oncology team provides accurate diagnosis, personalized treatment plans, 
+and continuous monitoring throughout the treatment process. With modern medical technology and supportive care services,
+we focus on minimizing side effects and improving patient comfort. Our goal is to deliver effective, compassionate care that enhances recovery, 
+survival, and overall quality of life.">
+                    <h2>Cancer Treatments</h2>
+                </div>
+
+                <div class="special" onclick="showInfo(this)"
+                    data-info="General Medicine:
+General Medicine provides comprehensive diagnosis and treatment for common illnesses such as fever, infections, diabetes,
+hypertension, respiratory diseases, and digestive disorders. Our physicians focus on preventive care, early detection,
+and effective management of both acute and chronic conditions. With patient-centered treatment plans and continuous monitoring,
+we ensure accurate diagnosis and timely medical intervention. Our aim is to promote overall health, prevent complications,
+and improve the quality of life for every patient.">
+                    <h2>General Medicine</h2>
+                </div>
+
+                <div class="special" onclick="showInfo(this)"
+                    data-info="Internal Medicine:
+Internal Medicine focuses on comprehensive adult healthcare and the non-surgical treatment of complex medical conditions.
+It includes the diagnosis, management, and prevention of diseases such as diabetes, hypertension, heart disorders, respiratory illnesses,
+and gastrointestinal problems. Our experienced physicians provide personalized treatment plans, long-term care,
+and continuous monitoring to ensure effective recovery. With a holistic and patient-centered approach, we aim to improve overall health,
+prevent complications, and enhance quality of life.">
+                    <h2>Internal Medicine</h2>
+                </div>
+            </div>
+
+            <p id="dept-info"></p>
+        </div>
+
+        <div class="appoitment">
+            <h2>BOOK AN APPOINTMENT</h2>
+
+            <form>
+                <div class="inputs">
+
+                    <input type="text" id="name" placeholder="Enter your Name"
+                        required>
+
+                    <input type="tel" id="phone" placeholder="Mobile Number"
+                        required>
+
+                    <input type="email" id="email"
+                        placeholder="Enter your Email" required>
+
+                    <select id="service" required>
+                        <option value>Select Department</option>
+                        <option>Health Checkup</option>
+                        <option>Cardiology</option>
+                        <option>Neurology</option>
+                        <option>Orthopedics</option>
+                        <option>Other</option>
+                    </select>
+
+                    <select id="location" required>
+                        <option value>Select Location</option>
+                        <option>Chennai</option>
+                        <option>Mumbai</option>
+                        <option>Kolkata</option>
+                        <option>Bengaluru</option>
+                    </select>
+
+                    <textarea id="description"
+                        placeholder="Describe your problem (optional)"></textarea>
+
+                    <button type="button" onclick="bookAppointment()">Book
+                        Appointment</button>
+
+                    <button type="reset">Reset</button>
+
+                </div>
+            </form>
+        </div>
+        <script>
+async function bookAppointment() {
+
+    const data = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        service: document.getElementById('service').value,
+        location: document.getElementById('location').value,
+        description: document.getElementById('description').value
+    };
+
+    console.log("Sending Data:", data);
+
+    try {
+        const response = await fetch("http://localhost:5000/book", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        console.log("Server Response:", result);
+
+        if (result.status === "success") {
+            alert("Appointment Booked Successfully!");
+            document.querySelector("form").reset();
+        } else {
+            alert("Booking Failed!");
+        }
+
+    } catch (error) {
+        console.error("Fetch Error:", error);
+        alert("Backend Server Not Reachable!");
+    }
+}
+</script>
+
+        <!-- FOOTER -->
+        <footer class="foot">
+            <div class="loco">
+                <h2>Location</h2>
+                <h3>Anna Nagar, Chennai</h3>
+            </div>
+
+            <div class="refer">
+                <a href="https://www.google.com" target="_blank">>Reference</a>
+                <a href="https://chat.openai.com" target="_blank">>Need Help</a>
+                <a href="https://assistant.google.com"
+                    target="_blank">>Assistant</a>
+            </div>
+
+            <div class="website">
+                <a href="https://www.whatsapp.com" target="_blank">>Whatsapp</a>
+                <a href="https://www.instagram.com"
+                    target="_blank">>Instagram</a>
+                <a href="https://maps.google.com" target="_blank">>Location</a>
+                <a href="https://mail.google.com" target="_blank">>Email</a>
+            </div>
+        </footer>
+
+        <!-- SCRIPT -->
+        <script>
+        function showInfo(el) {
+            document.getElementById("dept-info").innerText = el.dataset.info;
+        }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book Appointment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="appoitment">
+    <h2>BOOK AN APPOINTMENT</h2>
+
+    <form>
+        <div class="inputs">
+
+            <input type="text" id="name" placeholder="Enter your Name" required>
+
+            <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+            <input type="email" id="email" placeholder="Enter your Email" required>
+
+            <select id="service" required>
+                <option value="">Select Department</option>
+                <option>Health Checkup</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>Other</option>
+            </select>
+
+            <select id="location" required>
+                <option value="">Select Location</option>
+                <option>Chennai</option>
+                <option>Mumbai</option>
+                <option>Kolkata</option>
+                <option>Bengaluru</option>
+            </select>
+
+            <textarea id="description" placeholder="Describe your problem (optional)"></textarea>
+
+            <button type="button" onclick="bookAppointment()">Book Appointment</button>
+            
+
+            <button type="reset">Reset</button>
+
+        </div>
+    </form>
+</div>
+<script>
+async function bookAppointment() {
+
+    const data = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        service: document.getElementById('service').value,
+        location: document.getElementById('location').value,
+        description: document.getElementById('description').value
+    };
+
+    console.log("Sending Data:", data);
+
+    try {
+        const response = await fetch("http://localhost:5000/book", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        console.log("Server Response:", result);
+
+        if (result.status === "success") {
+            alert("Appointment Booked Successfully!");
+            document.querySelector("form").reset();
+        } else {
+            alert("Booking Failed!");
+        }
+
+    } catch (error) {
+        console.error("Fetch Error:", error);
+        alert("Backend Server Not Reachable!");
+    }
+}
+</script>
+
+
+</body>
+</html>
